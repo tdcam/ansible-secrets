@@ -8,7 +8,7 @@ To use this, create a user and a password hash. The user can be whatever
 you want. To create the password hash, you can run "mkpasswd -m sha512crypt" 
 from the command line, then paste it into the password.yml file.
 
-Play around with ansible-vault create <file>.
+Play around with ansible-vault create [file] and then ansible-vault edit [file].
 
 To use the vault, use:
 ansible-navigator run -m stdout create-users.yml --vault-id @prompt
