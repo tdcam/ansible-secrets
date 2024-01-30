@@ -6,7 +6,8 @@
   vars_files:
     - password.yml
   tasks:
-    - name: Creating user from secret.yml
+    - name: Removing user from secret.yml
       ansible.builtin.user:
         name: "{{ username }}"
-        password: "{{ passhash }}"
+        state: absent
+        remove: true
